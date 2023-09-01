@@ -25,7 +25,7 @@ dns:
     ipcidr:
       - 240.0.0.0/4
 proxies:
-- name: vless-reality-vision节点
+- name: "vless-reality-vision节点"
   type: vless
   server: blog.ddqq.ltd
   port: 443
@@ -39,7 +39,7 @@ proxies:
     public-key: BVJuAcrWcV3LLqHjOh2gzo64MrYkn9kmD2t5RuW1Bzc
     short-id:
   client-fingerprint: chrome
-- name: vless-reality-grpc节点
+- name: "vless-reality-grpc节点"
   type: vless
   server: blog.ddqq.ltd
   port: 443
@@ -55,7 +55,7 @@ proxies:
   reality-opts:
     public-key: BVJuAcrWcV3LLqHjOh2gzo64MrYkn9kmD2t5RuW1Bzc
     short-id:
-- name: vless-ws-tls节点
+- name: "vless-ws-tls节点"
   type: vless
   server: blog.ddqq.ltd
   port: 443
@@ -68,7 +68,7 @@ proxies:
     path: "/alonews"
     headers:
       Host: blog.ddqq.ltd
-- name: vmess-ws-tls节点
+- name: "vmess-ws-tls节点"
   type: vmess
   server: blog.ddqq.ltd
   port: 443
@@ -83,7 +83,7 @@ proxies:
     path: "/alonevws"
     headers:
       Host: blog.ddqq.ltd
-- name: trojan-tcp-tls节点
+- name: "trojan-tcp-tls节点"
   type: trojan
   server: blog.ddqq.ltd
   port: 443
@@ -95,7 +95,7 @@ proxies:
     - h2
     - http/1.1
   skip-cert-verify: false
-- name: tuic-V5节点
+- name: "tuic-V5节点"
   server: blog.ddqq.ltd
   port: 15078
   type: tuic
@@ -106,7 +106,7 @@ proxies:
   reduce-rtt: true
   udp-relay-mode: native
   congestion-controller: bbr
-- name: warp-wireguard节点
+- name: "warp-wireguard节点"
   type: wireguard         
   server: 188.114.97.202
   port: 1010
@@ -116,35 +116,35 @@ proxies:
   private-key: CEFUunobuc7KVaZNLoLSBW7Pa3IQQLJgu6UQIAwdGX0=
   udp: true
 proxy-groups:
-- name: 负载均衡
+- name: "负载均衡"
   type: load-balance
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-    - warp-wireguard节点
-    - vless-ws-tls节点
-    - vless-ws节点
-- name: 自动选择
+    - "warp-wireguard节点"
+    - "vless-ws-tls节点"
+    - "vless-ws节点"
+- name: "自动选择"
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
   proxies:
-    - vless-reality-vision节点
-    - vless-reality-grpc节点
-- name: 🌍选择代理节点
+    - "vless-reality-vision节点"
+    - "vless-reality-grpc节点"
+- name: "🌍选择代理节点"
   type: select
   proxies:
-    - 负载均衡
-    - 自动选择
+    - "负载均衡"
+    - "自动选择"
     - DIRECT
-    - vless-reality-vision节点                                    
-    - vless-reality-grpc节点
-    - vless-ws-tls节点
-    - vmess-ws-tls节点
-    - trojan-tcp-tls节点
-    - tuic-V5节点
-    - warp-wireguard节点
+    - "vless-reality-vision节点"                                   
+    - "vless-reality-grpc节点"
+    - "vless-ws-tls节点"
+    - "vmess-ws-tls节点"
+    - "trojan-tcp-tls节点"
+    - "tuic-V5节点"
+    - "warp-wireguard节点"
 rules:
-  - GEOIP,CN,DIRECT
-  - MATCH,🌍选择代理节点
+  - "GEOIP,CN,DIRECT"
+  - "MATCH,🌍选择代理节点"
