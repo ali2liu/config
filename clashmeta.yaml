@@ -25,159 +25,95 @@ dns:
     ipcidr:
       - 240.0.0.0/4
 proxies:
-- name: vless-reality-vision节点               #可自定义名称
+- name: vless-reality-vision节点
   type: vless
-  server: blog.ddqq.ltd                             #解析的域名或IP
-  port: 443                                 #自定义的端口
-  uuid: 77c534c1-ce24-4e25-99df-2bb0ad0b8cc9   #自定义的uuid
+  server: blog.ddqq.ltd
+  port: 443
+  uuid: 77c534c1-ce24-4e25-99df-2bb0ad0b8cc9
   network: tcp
   udp: true
   tls: true
   flow: xtls-rprx-vision
-  servername: blog.ddqq.ltd                   #自定义的第三方域名
+  servername: blog.ddqq.ltd
   reality-opts: 
-    public-key: BVJuAcrWcV3LLqHjOh2gzo64MrYkn9kmD2t5RuW1Bzc    #自定义的public-key
-    short-id:                         #自定义的short-id
-  client-fingerprint: chrome                  #自定义的浏览器指纹
-- name: vless-reality-grpc节点                  #可自定义名称
+    public-key: BVJuAcrWcV3LLqHjOh2gzo64MrYkn9kmD2t5RuW1Bzc
+    short-id:
+  client-fingerprint: chrome
+- name: vless-reality-grpc节点
   type: vless
-  server: blog.ddqq.ltd                               #解析的域名或IP
-  port: 443                                   #自定义的端口
-  uuid: 77c534c1-ce24-4e25-99df-2bb0ad0b8cc9    #自定义的uuid
+  server: blog.ddqq.ltd
+  port: 443
+  uuid: 77c534c1-ce24-4e25-99df-2bb0ad0b8cc9
   network: grpc
   tls: true
   udp: true
   flow:
-  client-fingerprint: chrome                    #自定义的浏览器指纹
-  servername: blog.ddqq.ltd                     #自定义的第三方域名
+  client-fingerprint: chrome
+  servername: blog.ddqq.ltd
   grpc-opts:
-    grpc-service-name: "grpc"                  #" "内自定义的字符
+    grpc-service-name: "grpc"
   reality-opts:
-    public-key: BVJuAcrWcV3LLqHjOh2gzo64MrYkn9kmD2t5RuW1Bzc    #自定义的public-key
-    short-id:                           #自定义的short-id
-- name: vless-xtls-rprx-vision节点              #可自定义名称
+    public-key: BVJuAcrWcV3LLqHjOh2gzo64MrYkn9kmD2t5RuW1Bzc
+    short-id:
+- name: vless-ws-tls节点
   type: vless
-  server: yg.ygkkk.eu.org                      #解析的域名
-  port: 12345                                  #自定义的端口
-  uuid: 5f74f86b-3ee8-44f4-adc4-6666be3d315    #自定义的uuid
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-- name: vless-ws-tls节点                           #可自定义名称
-  type: vless
-  server: blog.ddqq.ltd                          #解析的域名或者优选域名IP
-  port: 443                                      #自定义的端口
-  uuid: 77c534c1-ce24-4e25-99df-2bb0ad0b8cc9       #自定义的uuid
+  server: blog.ddqq.ltd
+  port: 443
+  uuid: 77c534c1-ce24-4e25-99df-2bb0ad0b8cc9
   udp: true
   tls: true
   network: ws
-  servername: blog.ddqq.ltd                     #sni域名，与下面的host一致
+  servername: blog.ddqq.ltd
   ws-opts:
-    path: "/alonews"                              #" "内自定义的path路径
+    path: "/alonews"
     headers:
-      Host: blog.ddqq.ltd                       #host域名，与上面的servername一致
-- name: vless-ws节点                               #可自定义名称
-  type: vless
-  server: yg.ygkkk.eu.org                          #解析的域名或者优选域名IP
-  port: 8880                                       #自定义的端口
-  uuid: 77a571fb-4fd2-4b37-8596-1b7d9728bb5c       #自定义的uuid
-  udp: true
-  tls: false
-  network: ws
-  servername: abc.ygkkk.eu.org                     #sni域名，与下面的host一致
-  ws-opts:
-    path: "/?ed=2048"                              #" "内自定义的path路径
-    headers:
-      Host: abc.ygkkk.eu.org                       #host域名，与上面的servername一致
-- name: vmess-ws-tls节点                           #可自定义名称
+      Host: blog.ddqq.ltd
+- name: vmess-ws-tls节点
   type: vmess
-  server: blog.ddqq.ltd                          #解析的域名或者优选域名IP
-  port: 443                                      #自定义的端口
-  uuid: 77c534c1-ce24-4e25-99df-2bb0ad0b8cc9       #自定义的uuid
+  server: blog.ddqq.ltd
+  port: 443
+  uuid: 77c534c1-ce24-4e25-99df-2bb0ad0b8cc9
   alterId: 0
   cipher: auto
   udp: true
   tls: true
   network: ws
-  servername: blog.ddqq.ltd                     #sni域名，与下面的host一致
+  servername: blog.ddqq.ltd
   ws-opts:
-    path: "/alonevws"                              #自定义的path路径
+    path: "/alonevws"
     headers:
-      Host: blog.ddqq.ltd                       #host域名，与上面的servername一致
-- name: vmess-ws节点                               #可自定义名称
-  type: vmess
-  server: yg.ygkkk.eu.org                          #解析的域名或者优选域名IP
-  port: 8880                                       #自定义的端口
-  uuid: 77a571fb-4fd2-4b37-8596-1b7d9728bb5c       #自定义的uuid
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: ws
-  servername: abc.ygkkk.eu.org                     #sni域名，与下面的host一致
-  ws-opts:
-    path: "/?ed=2048"                              #" "内自定义的path路径
-    headers:
-      Host: abc.ygkkk.eu.org                       #host域名，与上面的servername一致
-- name: trojan-tcp-tls节点                         #可自定义名称
+      Host: blog.ddqq.ltd
+- name: trojan-tcp-tls节点
   type: trojan
-  server: blog.ddqq.ltd                          #解析的域名
-  port: 443                                      #自定义的端口
-  password: 77c534c1-ce24-4e25-99df-2bb0ad0b8cc9                              #自定义的密码
+  server: blog.ddqq.ltd
+  port: 443
+  password: 77c534c1-ce24-4e25-99df-2bb0ad0b8cc9
   client-fingerprint: chrome
   udp: true
-  sni: blog.ddqq.ltd                             #sni域名，与上面server地址一致
+  sni: blog.ddqq.ltd
   alpn:
     - h2
     - http/1.1
   skip-cert-verify: false
-- name: hysteria证书节点                            #可自定义名称
-  type: hysteria
-  server: yg.ygkkk.eu.org                          #解析的域名
-  port: 12345                                      #自定义的端口，多端口改为 ports:空格1000,2000-3000
-  auth-str: 123456                                 #自定义的密码
-  alpn:
-    - h3
-  protocol: udp                                    #自定义协议：udp/wechat-video/faketcp
-  up: 20                                           #自定义的上传限制
-  down: 100                                        #自定义的下载限制
-  sni: yg.ygkkk.eu.org                             #sni域名，与上面server地址一致  
-  skip-cert-verify: false
-  fast-open: true
-- name: hysteria自签节点                           #可自定义名称
-  type: hysteria
-  server: 1.2.3.4                                  #服务器本地IP
-  port: 12345                                      #自定义的端口，多端口改为 ports:空格1000,2000-3000
-  auth-str: 123456                                 #自定义的密码
-  alpn:
-    - h3
-  protocol: udp                                    #自定义协议：udp/wechat-video/faketcp
-  up: 20                                           #自定义的上传限制
-  down: 100                                        #自定义的下载限制
-  sni: www.bing.com                                
-  skip-cert-verify: true
-  fast-open: true
-- name: tuic-V5节点                              #可自定义名称
-  server: blog.ddqq.ltd                        #解析的域名或IP
-  port: 15078                                    #自定义的端口
+- name: tuic-V5节点
+  server: blog.ddqq.ltd
+  port: 15078
   type: tuic
-  uuid: 77c534c1-ce24-4e25-99df-2bb0ad0b8cc9       #自定义的uuid
-  password: 77c534c1-ce24-4e25-99df-2bb0ad0b8cc9   #自定义的密码
+  uuid: 77c534c1-ce24-4e25-99df-2bb0ad0b8cc9
+  password: 77c534c1-ce24-4e25-99df-2bb0ad0b8cc9
   alpn: [h3]
   disable-sni: true
   reduce-rtt: true
   udp-relay-mode: native
   congestion-controller: bbr
-- name: warp-wireguard节点                                   #可自定义名称
+- name: warp-wireguard节点
   type: wireguard         
-  server: 188.114.97.202                                     #可自定义优选对端IP，与下面port的端口相对应
-  port: 1010                                                 #可自定义优选对端IP，与上面server的IP相对应
+  server: 188.114.97.202
+  port: 1010
   ip: 172.16.0.2
-  ipv6: 2606:4700:110:8d48:849f:edfe:1ffd:2c9               #与private-key相对应，如删除本行，表示仅IPV4
+  ipv6: 2606:4700:110:8d48:849f:edfe:1ffd:2c9
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: CEFUunobuc7KVaZNLoLSBW7Pa3IQQLJgu6UQIAwdGX0=  #获取private-key，私key
+  private-key: CEFUunobuc7KVaZNLoLSBW7Pa3IQQLJgu6UQIAwdGX0=
   udp: true
 proxy-groups:
 - name: 负载均衡
@@ -185,7 +121,7 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-    - warp-wireguard节点                                  #自定义添加协议的name字段
+    - warp-wireguard节点
     - vless-ws-tls节点
     - vless-ws节点
 - name: 自动选择
@@ -194,12 +130,12 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
-    - vless-reality-vision节点                            #自定义添加协议的name字段
+    - vless-reality-vision节点
     - vless-reality-grpc节点
 - name: 🌍选择代理节点
   type: select
   proxies:
-    - 负载均衡                                            #自定义添加协议的name字段
+    - 负载均衡
     - 自动选择
     - DIRECT
     - vless-reality-vision节点                                    
