@@ -76,8 +76,6 @@
     { "tag": "♻️ 自动选择", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "exclude", "keywords": ["网站|地址|剩余|过期|时间|有效"] }], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 50 },
     { "tag": "GLOBAL", "type": "selector", "outbounds": ["♻️ 自动选择", "🎯 全球直连", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "⭕ 欧洲节点", "🐸 手动切换"] },
     { "tag": "🎯 全球直连", "type": "direct" },
-    { "tag": "🛑 全部阻断", "type": "block" },
-    { "tag": "🛑 广告拦截", "type": "selector", "outbounds": ["🛑 全部阻断", "🚀 节点选择", "🎯 全球直连"] },
     { "tag": "dns-out", "type": "dns" }
   ],
   
@@ -120,8 +118,7 @@
       { "tag": "geosite-microsoft", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/microsoft.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-geolocation-!cn", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geoip-cn", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs", "download_detour": "🎯 全球直连" },
-      { "tag": "geosite-cn", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs", "download_detour": "🎯 全球直连" },
-      { "tag": "adblockplus", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/adblockplus.srs", "download_detour": "🎯 全球直连" }
+      { "tag": "geosite-cn", "type": "remote", "format": "binary", "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs", "download_detour": "🎯 全球直连" }
     ]
   }
 }
