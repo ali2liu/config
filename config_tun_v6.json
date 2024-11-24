@@ -47,7 +47,7 @@
       "strict_route": true,
       "sniff": true,
       "endpoint_independent_nat": false,
-      "stack": "dual",
+      "stack": "system",
       "platform": {
         "http_proxy": {
           "enabled": true,
