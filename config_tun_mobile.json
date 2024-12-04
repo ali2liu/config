@@ -96,8 +96,8 @@
         "final": "🐠 漏网之鱼",
     "rules": [
       { "type": "logical", "mode": "or", "rules": [{ "port": 53 }, { "protocol": "dns" }], "outbound": "dns-out" },
-      { "type": "field", "port": "9993", "outbound": "direct" },
-      { "type": "field", "source-port": "9993", "outbound": "direct" },
+      { "port": "9993", "outbound": "direct" },
+      { "source-port": "9993", "outbound": "direct" },
       { "rule_set": "geosite-category-ads-all", "outbound": "🛑 广告拦截" },
       { "clash_mode": "direct", "outbound": "🎯 全球直连" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
