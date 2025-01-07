@@ -92,7 +92,7 @@
       { "clash_mode": "direct", "outbound": "🎯 全球直连" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
       { "domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one", "com.huawei.cloud.hota"], "outbound": "🎯 全球直连" },
-      { "domain_suffix": [".ddqq.top", ".ddqq.fun", ".alibar.us.kg", ".ddqq.cloudns.org", ".ali88.ggff.net"], "outbound": "🎯 全球直连" },
+      { "domain_suffix": [".ddqq.top", ".ddqq.fun", ".alibar.us.kg", ".ddqq.cloudns.org", ".ali88.ggff.net", ".hkdvb.com"], "outbound": "🎯 全球直连" },
       { "ip_cidr": ["148.135.102.83/32", "148.135.85.14/32", "38.207.172.193/32", "198.46.226.139/32", "85.194.246.115/32", "159.138.41.49/32"], "outbound": "🎯 全球直连" },
       { "ip_is_private": true, "outbound": "🎯 全球直连" },
       { "domain_suffix": [".qichiyu.com"], "outbound": "🚀 节点选择" },
