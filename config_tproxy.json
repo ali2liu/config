@@ -90,6 +90,7 @@
       { "source_port": [9993, 5000, 5001, 80, 443, 5080, 8000, 8008, 8080, 8800, 9350, 10002, 20000, 20002, 21680], "outbound": "🎯 全球直连" },
       { "domain_suffix": [".ddqq.top", ".ddqq.fun", ".alibar.us.kg", ".ddqq.cloudns.org", ".ali88.ggff.net", ".hkdvb.com"], "outbound": "🎯 全球直连" },
       { "ip_cidr": ["148.135.102.83/32", "148.135.85.14/32", "38.207.172.193/32", "198.46.226.139/32", "85.194.246.115/32", "159.138.41.49/32"], "outbound": "🎯 全球直连" },
+      { "domain_suffix": ".nebula-media.org", "outbound": "🇺🇲 美国节点" },
       { "rule_set": "geosite-category-ads-all", "outbound": "🛑 广告拦截" },
       { "clash_mode": "direct", "outbound": "🎯 全球直连" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
