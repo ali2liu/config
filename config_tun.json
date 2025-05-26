@@ -33,9 +33,9 @@
       { "rule_set": "geosite-cn", "server": "localDns" },
       { "rule_set": "geosite-geolocation-!cn", "server": "proxyDns" }
     ],
-    "hosts": {
+    "hosts": [
     "fn.ddqq.fun": "192.168.10.235"
-  },
+    ],
     "final": "localDns",
     "strategy": "ipv4_only"
   },
