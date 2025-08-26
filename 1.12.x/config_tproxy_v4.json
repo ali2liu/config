@@ -3,7 +3,7 @@
     "disabled": false,
     "level": "info",
     "timestamp": true
-    ENABLE_DEPRECATED_SPECIAL_OUTBOUNDS=true
+    "enable_deprecated_special_outbounds": true
   },
   
   "experimental": {
