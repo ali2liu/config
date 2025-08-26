@@ -3,7 +3,6 @@
     "disabled": false,
     "level": "info",
     "timestamp": true
-    "enable_deprecated_special_outbounds": true
   },
   
   "experimental": {
@@ -112,13 +111,13 @@
     "rules": [
       {"action": "sniff", "sniffer": ["http", "tls", "quic", "dns"]},
       {"inbound": "dns-in", "action": "hijack-dns"},
+      {"ip_is_private": true, "outbound": "🎯 全球直连"},
       { "port": [9993, 5443, 6443, 8008, 8080, 8443, 21114, 21115, 21116, 21117, 21118, 21119], "outbound": "🎯 全球直连" },
       { "source_port": [9993, 5000, 5001, 80, 443, 5080, 8000, 8008, 8080, 8800, 9350, 10002, 20000, 20002, 21680], "outbound": "🎯 全球直连" },
       { "domain_suffix": [".ddqq.top", ".ddqq.fun", ".alibar.us.kg", ".ddqq.cloudns.org", ".ali88.ggff.net", ".hkdvb.com"], "outbound": "🎯 全球直连" },
       { "ip_cidr": ["148.135.102.83/32", "148.135.85.14/32", "38.207.172.193/32", "198.46.226.139/32", "85.194.246.115/32", "159.138.41.49/32", "156.226.171.65/32"], "outbound": "🎯 全球直连" },
       { "domain_suffix": ".nebula-media.org", "outbound": "🇺🇲 美国节点" },
       { "domain_suffix": [".hinet.net", ".4gtv.tv"], "outbound": "🇹🇼 台湾节点" },
-      { "rule_set": "geosite-category-ads-all", "outbound": "🛑 广告拦截" },
       { "clash_mode": "direct", "outbound": "🎯 全球直连" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
       { "domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one", "com.huawei.cloud.hota"], "outbound": "🎯 全球直连" },
@@ -150,11 +149,9 @@
       { "tag": "geosite-microsoft", "type": "remote", "format": "binary", "url": "https://ghp.ddqq.fun/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/microsoft.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-geolocation-!cn", "type": "remote", "format": "binary", "url": "https://ghp.ddqq.fun/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geoip-cn", "type": "remote", "format": "binary", "url": "https://ghp.ddqq.fun/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs", "download_detour": "🎯 全球直连" },
-      { "tag": "geosite-cn", "type": "remote", "format": "binary", "url": "https://ghp.ddqq.fun/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs", "download_detour": "🎯 全球直连" },
-      { "tag": "geosite-category-ads-all", "type": "remote", "format": "binary", "url": "https://ghp.ddqq.fun/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs", "download_detour": "🎯 全球直连" }
-    ],
+      { "tag": "geosite-cn", "type": "remote", "format": "binary", "url": "https://ghp.ddqq.fun/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs", "download_detour": "🎯 全球直连" }
     "final": "🐠 漏网之鱼",
-    "auto_detect_interface": true,
+    "default_domain_resolver": {"server": "public"}
     "default_mark": 666
   }
 }
