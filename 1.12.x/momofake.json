@@ -116,25 +116,25 @@
       "tag": "http-in",
       "type": "http",
       "listen": "::",
-      "listen_port": 8080
+      "listen_port": 7890
     },
     {
       "tag": "socks-in",
       "type": "socks",
       "listen": "::",
-      "listen_port": 1080
+      "listen_port": 7891
     },
     {
       "tag": "redirect-in",
       "type": "redirect",
       "listen": "::",
-      "listen_port": 7890
+      "listen_port": 7892
     },
     {
       "tag": "tproxy-in",
       "type": "tproxy",
       "listen": "::",
-      "listen_port": 7891
+      "listen_port": 7894
     },
     {
       "tag": "tun-in",
