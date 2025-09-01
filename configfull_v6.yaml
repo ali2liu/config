@@ -108,10 +108,10 @@ proxies:
   udp: true
  
 # 锚点
-pr: &pr {type: select, proxies: [🚀 节点选择, 🔯 香港故转, 🔯 狮城故转, 🔯 韩国故转, 🔯 日本故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 美国自动, ♻️ 欧洲自动, ⭕ 欧洲节点, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇹🇼 台湾节点, 🌐 全部节点, 🟢 直连]}
+pr: &pr {type: select, proxies: [🚀 默认代理, 🔯 香港故转, 🔯 狮城故转, 🔯 韩国故转, 🔯 日本故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 美国自动, ♻️ 欧洲自动, ⭕ 欧洲节点, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇹🇼 台湾节点, 🌐 全部节点, 🟢 直连]}
 # 策略组
 proxy-groups:
-  - {name: 🚀 节点选择, type: select, proxies: [🔯 香港故转, 🔯 狮城故转, 🔯 韩国故转, 🔯 日本故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 美国自动, ♻️ 欧洲自动, ⭕ 欧洲节点, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇹🇼 台湾节点, 🌐 全部节点, 🟢 直连]}
+  - {name: 🚀 默认代理, type: select, proxies: [🔯 香港故转, 🔯 狮城故转, 🔯 韩国故转, 🔯 日本故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 美国自动, ♻️ 欧洲自动, ⭕ 欧洲节点, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇹🇼 台湾节点, 🌐 全部节点, 🟢 直连]}
   - {name: 📹 YouTube, <<: *pr}
   - {name: 🍀 Google, <<: *pr}
   - {name: 🤖 ChatGPT, <<: *pr}
@@ -123,8 +123,8 @@ proxy-groups:
   - {name: 🎥 NETFLIX, <<: *pr}
   - {name: ✈️ Speedtest, <<: *pr}
   - {name: 💶 PayPal, <<: *pr}
-  - {name: 🍎 Apple, type: select, proxies: [🟢 直连, 🚀 节点选择]}
-  - {name: 🎯 全球直连, type: select, proxies: [🟢 直连, 🚀 节点选择]}
+  - {name: 🍎 Apple, type: select, proxies: [🟢 直连, 🚀 默认代理]}
+  - {name: 🎯 全球直连, type: select, proxies: [🟢 直连, 🚀 默认代理]}
   - {name: 🐟 漏网之鱼, <<: *pr}
   - {name: 🇭🇰 香港节点, type: select, include-all: true, filter: "(?i)港|hk|hongkong|hong kong"}
   - {name: 🇯🇵 日本节点, type: select, include-all: true, filter: "(?i)日|jp|japan"}
@@ -143,7 +143,7 @@ proxy-groups:
   - {name: ♻️ 欧洲自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(欧|EU|eu|PL|de(?i)Europe))^((?!(港|台|日|韩|新|美)).)*$"}
   - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
   - {name: 🌐 全部节点, type: select, include-all: true}
-  - {name: 🛑 广告拦截, type: select, proxies: [REJECT,🟢 直连, 🚀 节点选择]}
+  - {name: 🛑 广告拦截, type: select, proxies: [REJECT,🟢 直连, 🚀 默认代理]}
 rules:
   - IP-CIDR,148.135.102.83/32,🟢 直连
   - IP-CIDR,148.135.85.14/32,🟢 直连
@@ -161,13 +161,13 @@ rules:
   - DOMAIN-SUFFIX,nebula-media.org,🇺🇲 美国节点
   - DST-PORT,9993,🟢 直连
   - SRC-PORT,9993,🟢 直连
-  - DOMAIN-SUFFIX,qichiyu.com,🚀 节点选择
+  - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
   - DOMAIN-SUFFIX,4gtv.tv,🇹🇼 台湾节点
   - DOMAIN-SUFFIX,hinet.net,🇹🇼 台湾节点
   - RULE-SET,adblock,🛑 广告拦截
   - RULE-SET,private_domain,🟢 直连
   - RULE-SET,apple_domain,🍎 Apple
-  - RULE-SET,proxylite,🚀 节点选择
+  - RULE-SET,proxylite,🚀 默认代理
   - RULE-SET,ai,🤖 ChatGPT
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,youtube_domain,📹 YouTube
@@ -179,7 +179,7 @@ rules:
   - RULE-SET,telegram_domain,📲 Telegram
   - RULE-SET,netflix_domain,🎥 NETFLIX
   - RULE-SET,paypal_domain,💶 PayPal
-  - RULE-SET,geolocation-!cn,🚀 节点选择
+  - RULE-SET,geolocation-!cn,🚀 默认代理
   - RULE-SET,cn_domain,🎯 全球直连
   - RULE-SET,google_ip,🍀 Google,no-resolve
   - RULE-SET,netflix_ip,🎥 NETFLIX,no-resolve
