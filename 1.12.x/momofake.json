@@ -7,6 +7,31 @@
       {"tag": "fakeip", "type": "fakeip", "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"}
     ],
     "rules": [
+      {
+      "domain_suffix": [
+        "alipay.com",
+        "alipayobjects.com",
+        "alipayhk.com",
+        "antgroup.com",
+        "antfinancial.com",
+        "tenpay.com",
+        "wechat.com",
+        "wechatpay.cn",
+        "weixin.qq.com",
+        "wx.qq.com",
+        "unionpay.com",
+        "unionpaysecure.com",
+        "95516.com",
+        "localhost",
+        "local",
+        "lan",
+        "msftconnecttest.com",
+        "msftncsi.com",
+        "ddqq.fun",
+        "ddqq.top"
+      ],
+      "server": "local"
+    },
       {"clash_mode": "direct", "server": "local"},
       {"clash_mode": "global", "server": "fakeip"},
       {"query_type": "HTTPS", "action": "reject"},
