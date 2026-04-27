@@ -63,7 +63,9 @@
       "msftncsi.com",
       "time.windows.com",
       "time.apple.com",
-      "ntp.org"
+      "ntp.org",
+      "ddqq.fun",
+      "ddqq.top"
     ],
     "fakeip_filter_mode": "blacklist",
     "independent_cache": true,
